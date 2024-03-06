@@ -30,7 +30,7 @@ int main() {
                 puts("      2. GENERATION DE FICHIERS");
                 puts("      3. MARQUER LES PRESENCES");
                 puts("      4. ENVOYER UN MESSAGE");
-                puts("      5. QUITTER");
+                puts("      5. DECONNEXION");
                 puts("****************************************");
                 puts("Veuillez choisir une option : ");
                 scanf("%d", &choix);
@@ -89,7 +89,7 @@ int main() {
             puts("      1. MARQUER MA PRÉSENCE");
             puts("      2. NOMBRE DE MINUTES D’ABSENCE");
             puts("      3. MES MESSAGES (0)");
-            puts("      4. QUITTER");
+            puts("      4. DECONNEXION");
             puts("****************************************");
             puts("Veuillez choisir une option : ");
             scanf("%d", &choix);
