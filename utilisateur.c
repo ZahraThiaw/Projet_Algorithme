@@ -32,6 +32,55 @@ int main() {
                 puts("      4. ENVOYER UN MESSAGE");
                 puts("      5. QUITTER");
                 puts("****************************************");
+                puts("Veuillez choisir une option : ");
+                scanf("%d", &choix);
+
+                if (choix==1)
+                {
+                    puts("***************GESTION DES ETUDIANTS***************");
+                }else if (choix==2)
+                {
+                    puts("***************GENERATION DE FICHIERS***************");
+                }else if (choix==3)
+                {
+                    puts("***************MARQUER LES PRESENCES***************");
+                    
+
+                    int choixclasse;
+                    do
+                    {
+                        puts("***************CLASSES***************");
+                        puts("Classe 1 (Dev Web)");
+                        puts("Classe 2 (Ref Dig)");
+                        puts("Choisissez une classe : ");
+                        scanf("%d", &choixclasse);
+
+                        if (choixclasse==1)
+                        {
+                            // Saisie du matricule de l'apprenant
+                            int matriculeSaisi;
+                            printf("Entrez le matricule de l'apprenant : ");
+                            scanf("%d", &matriculeSaisi);
+
+                            ajoutpresent("classes.txt", matriculeSaisi, 1); // appel de la fonction ajoutpresent(const char* nomFichier, int matricule, int present) 
+                        }else if (choixclasse==2)
+                        {
+                            // Saisie du matricule de l'apprenant
+                            int matriculeSaisi;
+                            printf("Entrez le matricule de l'apprenant : ");
+                            scanf("%d", &matriculeSaisi);
+
+                            ajoutpresent("classes.txt", matriculeSaisi, 1); // appel de la fonction ajoutpresent(const char* nomFichier, int matricule, int present) 
+                        }
+                        
+                    } while (choixclasse != 1 && choixclasse != 2);
+                }
+                else if (choix==4)
+                {
+                    puts("***************ENVOYER UN MESSAGE***************");
+                }else if (choix==5) {
+                    break;
+                }
             } while (choix != 5);
 
         } else if (typeUtilisateur == 2) {
@@ -42,6 +91,31 @@ int main() {
             puts("      3. MES MESSAGES (0)");
             puts("      4. QUITTER");
             puts("****************************************");
+            puts("Veuillez choisir une option : ");
+            scanf("%d", &choix);
+            do
+            {
+                if (choix == 1)
+            {
+                puts("***************MARQUER MA PRÉSENCE***************");
+                int matriculeSaisi;
+                printf("Entrez le matricule de l'apprenant : ");
+                scanf("%d", &matriculeSaisi);
+                ajoutpresent("classes.txt", matriculeSaisi, 1); 
+            } else if (choix == 2)
+            {
+                puts("***************NOMBRE DE MINUTES D’ABSENCE***************");
+            } else if (choix == 3){
+                puts("***************MES MESSAGES***************");
+            } else if (choix == 4){
+                break;
+            }
+            } while (choix != 4);
+            
+            
+           
+        } else {
+            printf("Identifiants incorrects. Veuillez réessayer.\n");
         }
     } while (typeUtilisateur != 1 && typeUtilisateur != 2);
     return 0;
