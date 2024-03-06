@@ -120,3 +120,4 @@ int main() {
     } while (typeUtilisateur != 1 && typeUtilisateur != 2);
     return 0;
 }
+
