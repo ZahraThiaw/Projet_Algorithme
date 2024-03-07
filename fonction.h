@@ -27,6 +27,9 @@ typedef struct {
     int jour;
     int mois;
     int annee;
+    int heure;
+    int minute;
+    int seconde;
 } Date;
 typedef struct {
     int matricule;
@@ -34,5 +37,9 @@ typedef struct {
     int present;
 } presence;
 void dateAujourdhui(char* date);
+int presenceDejaAjoutee(const char* nomFichier, int matricule, Date date_presence);
 void ajoutpresent(const char* nomFichier, int matricule, int present);
+int checkPassword(const char* nomFichier, const char* username, const char* motDePasse);
+void marquerPresences();
+int matriculeValide(int matricule, const char* nomFichier);
 #endif

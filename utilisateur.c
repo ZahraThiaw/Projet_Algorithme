@@ -3,6 +3,8 @@
 #include "fonction.h"
 #include <string.h>
 #include <time.h>
+#include <termios.h>
+#include <unistd.h>
 
 
 int main() {
@@ -13,9 +15,6 @@ int main() {
         {"Admin", "Admin", "admin", "admin123", 1},
         {"Fatimata", "Thiaw", "Zahra", "2024", 2},
     };
-    char date[10];
-                dateAujourdhui(date);
-                printf("Date du jour : %s\n", date);
     char username[50];
     char motDePasse[50];
     int typeUtilisateur;
@@ -44,36 +43,40 @@ int main() {
                 }else if (choix==3)
                 {
                     puts("***************MARQUER LES PRESENCES***************");
-                    
+                    marquerPresences();
+                    //int choixclasse;
+                    // do
+                    // {
+                        // puts("***************CLASSES***************");
+                        // puts("Classe 1 (Dev Web)");
+                        // puts("Classe 2 (Ref Dig)");
+                        // puts("Choisissez une classe : ");
+                        // scanf("%d", &choixclasse);
 
-                    int choixclasse;
-                    do
-                    {
-                        puts("***************CLASSES***************");
-                        puts("Classe 1 (Dev Web)");
-                        puts("Classe 2 (Ref Dig)");
-                        puts("Choisissez une classe : ");
-                        scanf("%d", &choixclasse);
+                        // if (choixclasse==1)
+                        // {
+                        //     // Saisie du matricule de l'apprenant
+                        //     int matriculeSaisi;
+                        //     printf("Entrez le matricule de l'apprenant : ");
+                        //     scanf("%d", &matriculeSaisi);
 
-                        if (choixclasse==1)
-                        {
-                            // Saisie du matricule de l'apprenant
-                            int matriculeSaisi;
-                            printf("Entrez le matricule de l'apprenant : ");
-                            scanf("%d", &matriculeSaisi);
+                        //     ajoutpresent("presence.txt", matriculeSaisi, 1); // appel de la fonction ajoutpresent(const char* nomFichier, int matricule, int present) 
+                        // }else if (choixclasse==2)
+                        // {
+                        //     // Saisie du matricule de l'apprenant
+                        //     int matriculeSaisi;
+                        //     printf("Entrez le matricule de l'apprenant : ");
+                        //     scanf("%d", &matriculeSaisi);
 
-                            ajoutpresent("classes.txt", matriculeSaisi, 1); // appel de la fonction ajoutpresent(const char* nomFichier, int matricule, int present) 
-                        }else if (choixclasse==2)
-                        {
-                            // Saisie du matricule de l'apprenant
-                            int matriculeSaisi;
-                            printf("Entrez le matricule de l'apprenant : ");
-                            scanf("%d", &matriculeSaisi);
-
-                            ajoutpresent("classes.txt", matriculeSaisi, 1); // appel de la fonction ajoutpresent(const char* nomFichier, int matricule, int present) 
-                        }
-                        
-                    } while (choixclasse != 1 && choixclasse != 2);
+                        //     ajoutpresent("presence.txt", matriculeSaisi, 1); // appel de la fonction ajoutpresent(const char* nomFichier, int matricule, int present) 
+                        // }
+                        //Saisie du matricule de l'apprenant
+                    //         printf("Entrez le matricule de l'apprenant : ");
+                    //         scanf("%d", &matriculeSaisi);
+                    //         if (matriculeSaisi!='q' || matriculeSaisi!='Q'){
+                    //             ajoutpresent("presence.txt", matriculeSaisi, 1);
+                    //         }
+                    // } while (matriculeSaisi!='q' && matriculeSaisi!='Q');
                 }
                 else if (choix==4)
                 {
@@ -84,32 +87,34 @@ int main() {
             } while (choix != 5);
 
         } else if (typeUtilisateur == 2) {
+            
             int choix = 0;
-            puts("***************Menu Apprenant***************");
-            puts("      1. MARQUER MA PRÉSENCE");
-            puts("      2. NOMBRE DE MINUTES D’ABSENCE");
-            puts("      3. MES MESSAGES (0)");
-            puts("      4. DECONNEXION");
-            puts("****************************************");
-            puts("Veuillez choisir une option : ");
-            scanf("%d", &choix);
             do
             {
+                puts("***************Menu Apprenant***************");
+                puts("      1. MARQUER MA PRÉSENCE");
+                puts("      2. NOMBRE DE MINUTES D’ABSENCE");
+                puts("      3. MES MESSAGES (0)");
+                puts("      4. DECONNEXION");
+                puts("****************************************");
+                puts("Veuillez choisir une option : ");
+                scanf("%d", &choix);
+
                 if (choix == 1)
-            {
-                puts("***************MARQUER MA PRÉSENCE***************");
-                int matriculeSaisi;
-                printf("Entrez le matricule de l'apprenant : ");
-                scanf("%d", &matriculeSaisi);
-                ajoutpresent("classes.txt", matriculeSaisi, 1); 
-            } else if (choix == 2)
-            {
-                puts("***************NOMBRE DE MINUTES D’ABSENCE***************");
-            } else if (choix == 3){
-                puts("***************MES MESSAGES***************");
-            } else if (choix == 4){
-                break;
-            }
+                {
+                    puts("***************MARQUER MA PRÉSENCE***************");
+                    int matriculeSaisi;
+                    printf("Entrez le matricule de l'apprenant : ");
+                    scanf("%d", &matriculeSaisi);
+                    ajoutpresent("presence.txt", matriculeSaisi, 1);
+                } else if (choix == 2)
+                {
+                    puts("***************NOMBRE DE MINUTES D’ABSENCE***************");
+                } else if (choix == 3){
+                    puts("***************MES MESSAGES***************");
+                } else if (choix == 4){
+                    break;
+                }
             } while (choix != 4);
             
             
