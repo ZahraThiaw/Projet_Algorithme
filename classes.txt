@@ -1,6 +1,0 @@
-Étudiant 1: Matricule: 001, Nom: Étudiant 1
-Étudiant 2: Matricule: 002, Nom: Étudiant 2
-Étudiant 3: Matricule: 003, Nom: Étudiant 3
-Étudiant 4: Matricule: 004, Nom: Étudiant 4
-Étudiant 5: Matricule: 005, Nom: Étudiant 5
-Étudiant 6: Matricule: 006, Nom: Étudiant 6

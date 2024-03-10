@@ -1,0 +1,18 @@
+admin 124 Fatima Thiaw 10/3/2024 à 17:46:32 etat: 1 BONJOUR FATIMA
+admin 524 Oumar Sy 10/3/2024 à 17:50:50 etat: 0 Veuillez monter au sixieme
+admin 124 Fatima Thiaw 10/3/2024 à 18:35:34 etat: 1 Vous pouvez prendre la pause
+admin 224 Fatou Niang 10/3/2024 à 18:35:34 etat: 0 Vous pouvez prendre la pause
+admin 324 Aicha Diop 10/3/2024 à 18:35:34 etat: 0 Vous pouvez prendre la pause
+admin 424 Papi Gueye 10/3/2024 à 18:35:34 etat: 0 Vous pouvez prendre la pause
+admin 524 Oumar Sy 10/3/2024 à 18:35:34 etat: 0 Vous pouvez prendre la pause
+admin 624 Cheikh Mbacke 10/3/2024 à 18:35:34 etat: 0 Vous pouvez prendre la pause
+admin 724 Mouhamed Diagne 10/3/2024 à 18:35:34 etat: 0 Vous pouvez prendre la pause
+admin 624 Cheikh Mbacke 10/3/2024 à 19:13:58 etat: 0 Bonsoir
+admin 724 Mouhamed Diagne 10/3/2024 à 19:13:58 etat: 0 Bonsoir
+admin  124 Fatima Thiaw 10/3/2024 à 21:23:48 etat: 0 
+admin  224 Fatou Niang 10/3/2024 à 21:23:48 etat: 0 
+admin  324 Aicha Diop 10/3/2024 à 21:23:48 etat: 0 
+admin  424 Papi Gueye 10/3/2024 à 21:23:48 etat: 0 
+admin  524 Oumar Sy 10/3/2024 à 21:23:48 etat: 0 
+admin  624 Cheikh Mbacke 10/3/2024 à 21:23:48 etat: 0 
+admin  724 Mouhamed Diagne 10/3/2024 à 21:23:48 etat: 0 
